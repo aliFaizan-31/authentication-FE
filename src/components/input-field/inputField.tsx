@@ -1,6 +1,16 @@
 import React from 'react';
 
-function InputField({ label, name, type, placeholder, value, handleChange, required }: any) {
+interface InputFieldProps {
+    label: string;
+    name: string;
+    type: string;
+    placeholder: string;
+    value: string;
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    required: boolean;
+}
+
+function InputField({ label, name, type, placeholder, value, handleChange, required }: InputFieldProps) {
     return (
         <div className='mb-10'>
             <label className='display-block'>{label}</label>
